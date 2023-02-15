@@ -4,11 +4,15 @@ import { SecondBox } from "./SecondBox";
 import styles from "./MainData.module.css";
 import { Dropdown } from "./Dropdown";
 import useCurrentWeather from "../../../hooks/use-current-weather";
+import { useState } from "react";
+import { Loading } from "../../UI/Loading";
 
 export const MainData = () => {
-  const [data] = useCurrentWeather("Buenos Aires");
+  // const [currCity, setCurrCity] = useState("");
 
-  if (!data) return <p>cargando................</p>;
+  const [data] = useCurrentWeather("Mar del Plata");
+
+  if (!data) return <Loading />;
 
   const { weatherType, temp, pressure, humidity, visibility, windSpeed } = data;
 
@@ -16,7 +20,12 @@ export const MainData = () => {
     <div className={styles.mainDataContainer}>
       <Dropdown />
       <FirstBox weatherType={weatherType} temp={temp} />
-      <SecondBox pressure={pressure} humidity={humidity} visibility={visibility} windSpeed={windSpeed} />
+      <SecondBox
+        pressure={pressure}
+        humidity={humidity}
+        visibility={visibility}
+        windSpeed={windSpeed}
+      />
     </div>
   );
 };

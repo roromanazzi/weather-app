@@ -5,7 +5,7 @@ import { MainData } from "./components/Layout/MainDataBox/MainData";
 function App() {
   return (
     <div className="App">
-      {/* <FrontAnimation /> */}
+      <FrontAnimation />
       <MainData />
     </div>
   );

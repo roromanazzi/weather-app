@@ -1,0 +1,30 @@
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 150vw;
+  height: 40px;
+
+  background-color: rgba(245, 245, 245, 0.1);
+  backdrop-filter: blur(6px);
+
+  box-shadow: -4px 4px 10px 1px rgba(0, 0, 0, 0.05);
+}
+
+p {
+  font-family: "Iceland", sans-serif;
+  color: white;
+  font-size: 16px;
+
+  animation: translation 10s linear infinite;
+}
+
+@-webkit-keyframes translation {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-100px);
+  }
+}

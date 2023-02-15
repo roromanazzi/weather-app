@@ -7,7 +7,7 @@
 }
 
 .App {
-  background-image: url("./assets/img/sunny-day.jpg");
+  background-image: url("./assets/img/cloudy-day.jpg");
   background-size: cover;
 
   display: flex;

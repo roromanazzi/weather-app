@@ -14,10 +14,24 @@ const useCurrentWeather = (city) => {
     main: { temp, temp_max: maxTemp, temp_min: minTemp, humidity, pressure },
     wind: { speed: windSpeed },
     visibility,
-    weather: { main: weatherType },
+    weather,
   } = data;
 
-  return [{ weatherType, temp, maxTemp, minTemp, humidity, pressure, windSpeed, visibility }, { status }];
+  const { main: weatherType } = weather[0];
+
+  return [
+    {
+      weatherType,
+      temp,
+      maxTemp,
+      minTemp,
+      humidity,
+      pressure,
+      windSpeed,
+      visibility,
+    },
+    { status },
+  ];
 };
 
 export default useCurrentWeather;
