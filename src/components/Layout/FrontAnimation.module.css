@@ -1,0 +1,16 @@
+img {
+  position: absolute;
+  z-index: 10;
+  width: 400px;
+  filter: opacity(0.6);
+  animation: translation 60s linear infinite;
+}
+
+@-webkit-keyframes translation {
+  from {
+    transform: translateX(800px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}

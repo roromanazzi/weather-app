@@ -1,0 +1,21 @@
+select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 360px;
+  height: 40px;
+  padding: 0 10px;
+
+  border: none;
+  background-color: rgba(245, 245, 245, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  box-shadow: -4px 4px 10px 1px rgba(0, 0, 0, 0.05),
+    0px 4px 10px 2px rgba(0, 0, 0, 0.1);
+
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+}

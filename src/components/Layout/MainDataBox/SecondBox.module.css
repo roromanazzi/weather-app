@@ -1,0 +1,48 @@
+.secondBoxContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 360px;
+  height: 200px;
+
+  background-color: rgba(245, 245, 245, 0.1);
+  backdrop-filter: blur(6px);
+
+  border-radius: 15px;
+  box-shadow: -4px 4px 10px 1px rgba(0, 0, 0, 0.05),
+    0px 4px 10px 2px rgba(0, 0, 0, 0.1);
+
+  font-family: "Iceland", sans-serif;
+  color: white;
+}
+
+.dataContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: inherit;
+  height: 44px;
+
+  box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.05);
+}
+
+.dataContainer:first-of-type {
+  border-radius: 15px 15px 0 0;
+}
+
+.dataContainer:last-of-type {
+  border-radius: 0 0 15px 15px;
+}
+
+.dataTitle {
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+.dataUnit {
+  font-size: 14px;
+  font-weight: 100;
+}

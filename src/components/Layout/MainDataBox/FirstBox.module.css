@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Iceland&family=Raleway:wght@100;200;400;600&display=swap");
+.firstBoxContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 360px;
+  height: 200px;
+
+  font-family: "Iceland", cursive;
+  color: white;
+}
+
+.actWeatherContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: inherit;
+  padding: 0 20px;
+
+  font-size: 60px;
+}
+
+h1 {
+  font-weight: 100;
+  text-align: center;
+}
+
+.actualWeatherIcon {
+  display: flex;
+  align-items: center;
+  font-size: 1.75em;
+  animation: rotation 10s linear infinite;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(90deg);
+  }
+}
+
+.actualWeatherTitle {
+  width: inherit;
+  padding: 0 20px;
+}
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.dayNightContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: inherit;
+  padding: 0 20px;
+}
+
+.dayTContainer,
+.nightTContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 36px;
+  font-weight: 100;
+}

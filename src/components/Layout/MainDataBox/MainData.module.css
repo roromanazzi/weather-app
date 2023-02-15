@@ -1,0 +1,19 @@
+.mainDataContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 400px;
+  height: 90vh;
+  margin-left: 80px;
+
+  background-color: rgba(245, 245, 245, 0.1);
+  backdrop-filter: blur(6px);
+
+  border-radius: 15px;
+  box-shadow: -4px 4px 10px 1px rgba(0, 0, 0, 0.05);
+
+  font-family: "Iceland", sans-serif;
+  color: white;
+}
