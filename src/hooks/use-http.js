@@ -1,18 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
-export const useHttp = () => {
-  const [info, setInfo] = useState(null);
+export const useHttp = (url) => {
+  const [data, setData] = useState(null);
+  const [status, setStatus] = useState("loading");
+  const isFetchingRef = useRef(false);
 
   useEffect(() => {
-    try {
-      const sendRequest = async () => {
+    const sendRequest = async () => {
+      isFetchingRef.current = true;
+      try {
         const res = await fetch(url);
         const data = await res.json();
-        setInfo(data);
-      };
+        setData(data);
+        setStatus("success");
+      } catch (error) {
+        setStatus("error");
+      }
+      isFetchingRef.current = false;
+    };
+
+    if (!isFetchingRef.current) {
       sendRequest();
-    } catch (error) {
-      console.log(error);
     }
   }, []);
+
+  return { data, status };
 };
