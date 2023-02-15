@@ -19,6 +19,7 @@ const useCurrentWeather = (city) => {
 
   const { main: weatherType } = weather[0];
 
+<<<<<<< HEAD
   return [
     {
       weatherType,
@@ -32,6 +33,9 @@ const useCurrentWeather = (city) => {
     },
     { status },
   ];
+=======
+  return [{ weatherType, temp, maxTemp, minTemp, humidity, pressure, windSpeed, visibility }, { status }];
+>>>>>>> 6ea095f5dfec61523e28eb8b75103bafbcfd737f
 };
 
 export default useCurrentWeather;
